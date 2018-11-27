@@ -6,27 +6,30 @@ namespace Project_Prime
     {
         static void Main(string[] args)
         {
-            int a, b, i, Sum = 0;
+            
+            long largestFact = 0;
 
-            for (i = 1; i < 100; i++)
+            for (long i = 2; i <= 17; i++)
             {
-                if (100 % 2 == 0)
-                {
-
-                    a = 100 / i;
-                    Console.Write("{0}\t",a);
+                if (17 % i == 0)
+                { // It is a divisor
+                    bool isPrime = true;
+                    for (long j = 2; j < i; j++)
+                    {
+                        if (i % j == 0)
+                        {
+                            isPrime = false;
+                            break;
+                        }
+                    }
+                    if (isPrime)
+                    {
+                        largestFact = i;
+                        Console.Write(i);
+                        Console.Read();
+                    }
                 }
-
-                /*a = i % 3;
-                b = i % 5;
-                if (a == 0 || b == 0)
-                {
-                    Console.Write("{0}\t", i);
-                    Sum = Sum + i;
-                } */
             }
-            //Console.WriteLine("\nThe Sum of all the Multiples of 3 or 5 Below 100 : {0}", Sum);
-            Console.Read();
         }
     }
 }

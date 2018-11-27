@@ -16,10 +16,10 @@ namespace Project2
             int i = 0;
             int sum = 0;
 
-            //Console.Write("{0}\t", a);
-            //Console.Write("{0}\t", b);
+            Console.Write("{0}\t", a);
+            Console.Write("{0}\t", b);
             
-          while(c< 50)
+          while(c < 50)
             {
                 if (c % 2 == 0)
                 {
@@ -30,7 +30,7 @@ namespace Project2
                 c = a + b;
                 a = b;
                 b = c;
-                //Console.Write("{0}\t", c);
+                Console.Write("{0}\t", c);
             }
             Console.Write("{0}\t", sum);
 
